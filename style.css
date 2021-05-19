@@ -73,7 +73,7 @@ body{
 .vectors{
     grid-column: 1/1;
     grid-row: 1/1;
-    max-width: var(--vector-sizes);
+    max-width: 100%;
 }
 
 .title{
@@ -95,6 +95,7 @@ body{
     margin-right: 0;
     font-size: var(--main-font-size);
     padding: 0;
+    margin: 0;
     line-height: 27px;
 }
 
@@ -115,6 +116,7 @@ body{
     background-color: var(--t-color);
     border: 2px solid white;
     margin-bottom: 25%;
+    margin-top: 0;
 }
 
 .sedans{
@@ -134,9 +136,40 @@ body{
     color: white;
 }
 
-@media screen and (max-width: 780px){
-    .card-container{
+@media screen and (max-width: 814px){
+    body{
+        overflow-y: scroll;
+    }
+
+    .card{
         flex-direction: column;
-        overflow-x: hidden;
+        height: 100%;
+    }
+
+    .first-card,.sec-card,.third-card{
+        height: 400px;
+    }
+
+    .first-card{
+        margin-top: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 12px;
+    }
+
+    .third-card{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 12px;
+        margin-bottom: 12px;
+    }
+
+    .vectors{
+        max-width: 100%;
+    }
+
+    .button{
+        height: 22px;
+        width: 140px;
+        margin-bottom: 20px;
     }
 }
